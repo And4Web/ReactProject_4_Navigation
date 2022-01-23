@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
+  const [navStatus, setNavStatus] = useState(0);
+  const [navWidth, setNavWidth] = useState("");
+
+  function toggleNav() {
+    if (navStatus == 0) {
+      setNavStatus(1);
+      setNavWidth("100%");
+    } else {
+      setNavStatus(0);
+      setNavWidth("0px");
+    }
+  }
+
   return (
-    <div className="navbar">
-      <button>
-        <i class="fas fa-bars"></i>
+    <div className="navbar" style={{ width: navWidth }}>
+      <button onClick={toggleNav}>
+        <i className="fas fa-bars"></i>
       </button>
       <ul>
         <li>Home</li>
@@ -15,3 +28,7 @@ export default function Navbar() {
     </div>
   );
 }
+
+//
+
+//
