@@ -12,4 +12,4 @@ Technologies used in this project:
 
 4. React Hooks
 
-#Note: use of !important after some of the css properties. 4. React Hooks and Forms
+#Note: use of !important after some of the css properties.
